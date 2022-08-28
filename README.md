@@ -8,4 +8,4 @@
   
 #### frontend: React, SCSS
 
-#### backend: tba
+#### backend: Node.js, tba
