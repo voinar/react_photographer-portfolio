@@ -1,0 +1,36 @@
+// general
+
+@import './reset'; // global css reset
+@import './variables'; // style variables container for colors, fonts and other global styles
+
+
+// pages
+
+
+// components
+@import './components/_navbar';
+
+
+html * {
+    // outline: 1px solid black;
+}
+
+body {
+    font-family: $--font-main;
+    color: $--c-white;
+    background-color: $--c-white;
+    min-width: 600px;
+}
+.cover-photo {
+    height: 80vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.section__container {
+    padding: 0 120px;
+}
+
+.section__photos__images img {
+    padding: 100px;
+}
