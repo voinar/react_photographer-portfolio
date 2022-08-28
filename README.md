@@ -6,6 +6,6 @@
   * database
   * payment gateway
   
-### frontend: React, SCSS
+#### frontend: React, SCSS
 
-### backend: tba
+#### backend: tba
