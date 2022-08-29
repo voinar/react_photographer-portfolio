@@ -1,15 +1,13 @@
 import navLogo from "../img/logo.png";
 import categoryData from "../data/data.json";
 import { Link } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useContext } from "react";
 import Context from "../contexts/Context";
 
 import iconSun from "../img/icons/icon-sun.svg";
 import iconMoon from "../img/icons/icon-moon.svg";
 
 const Navbar = () => {
-  const { category } = useParams();
   const { darkMode, setDarkMode } = useContext(Context);
 
   // console.log(darkMode)
@@ -40,21 +38,23 @@ const Navbar = () => {
               </ul>
             );
           }
-          if (category !== "galerie") {
+          else if (category !== "galerie") {
             return (
               <li key={category} className="navbar__section-link">
                 <Link to={category}>{category}</Link>
               </li>
             );
-          }
-        })}
+          } else return null
+        }
+        )
+        }
         {darkMode ? (
           <li>
-            <img src={iconMoon} className="navbar__darkmode-toggle" onClick={()=>{setDarkMode(!darkMode)}}></img>
+            <img src={iconMoon} className="navbar__darkmode-toggle" onClick={()=>{setDarkMode(!darkMode)}} alt="toggle dark mode" />
           </li>
         ) : (
           <li>
-            <img src={iconSun} className="navbar__darkmode-toggle" onClick={()=>{setDarkMode(!darkMode)}}></img>
+            <img src={iconSun} className="navbar__darkmode-toggle" onClick={()=>{setDarkMode(!darkMode)}}alt="toggle dark mode" />
           </li>
         )}
       </ul>

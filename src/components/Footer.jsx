@@ -1,7 +1,7 @@
 // import categoryData from "../data/data.json";
 // import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom'
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import Context from '../contexts/Context'
 
 import footerLogo from "../img/logo.png";
@@ -21,7 +21,7 @@ const Footer = () => {
     } else {
       setDarkMode(false);
     }
-  }, [category]);
+  }, [category, darkMode, setDarkMode]);
 
   const returnToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -32,15 +32,15 @@ const Footer = () => {
       <div className="footer__content">
         <div className="footer__column">
           <div className="footer__logo">
-            <img src={footerLogo} />
+            <img src={footerLogo} alt="logo"/>
           </div>
           <div className="footer__social">
             <span>Znajdź mnie na</span>
             <div className="footer__icon">
-              <img src={iconFacebook} />
+              <img src={iconFacebook} alt="facebook" />
             </div>
             <div className="footer__icon">
-              <img src={iconInstagram} />
+              <img src={iconInstagram} alt="instagram" />
             </div>
           </div>
         </div>
