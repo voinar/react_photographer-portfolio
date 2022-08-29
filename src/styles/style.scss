@@ -9,8 +9,9 @@
 
 // components
 @import '../components/styles/_navbar';
-@import '../components/styles/_SectionWelcome';
-@import '../components/styles/_SectionContent';
+@import '../pages/styles/_SectionWelcome';
+@import '../pages/styles/_SectionContent';
+@import '../pages/styles/_About';
 @import '../components/styles/_footer';
 
 
@@ -23,6 +24,8 @@ body {
     color: $--c-black;
     background-color: black;
     min-width: 600px;
+    // overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 

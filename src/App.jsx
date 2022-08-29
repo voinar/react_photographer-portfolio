@@ -1,9 +1,13 @@
-import { Routes, Route, Link } from "react-router-dom";
 import "./styles/style.css";
 
+import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
+import Context from "./contexts/Context";
+
 import Navbar from "./components/Navbar";
-import SectionWelcome from "./components/SectionWelcome";
-import SectionContent from "./components/SectionContent";
+import SectionWelcome from "./pages/SectionWelcome";
+import SectionContent from "./pages/SectionContent";
+import About from "./pages/About";
 
 // {localStorage.setItem('user', 'name')}
 // {sessionStorage.setItem('status', 'unread')}
@@ -11,16 +15,20 @@ import SectionContent from "./components/SectionContent";
 // {document.cookie="myCookie=init; expires=" + new Date(2022, 7, 28, 11, 52, 30)}
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<SectionWelcome />} />
-        <Route path="/witaj" element={<SectionWelcome />} />
-        <Route path="/:category" element={<SectionContent />} />
-      </Routes>
+  const [darkMode, setDarkMode] = useState(false)
 
-    </div>
+  return (
+    <Context.Provider value={{ darkMode, setDarkMode }}>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<SectionWelcome />} />
+          <Route path="/witaj" element={<SectionWelcome />} />
+          <Route path="/:category" element={<SectionContent />} />
+          <Route path="/o%20mnie" element={<About />} />
+        </Routes>
+      </div>
+    </Context.Provider>
   );
 }
 

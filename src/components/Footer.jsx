@@ -1,6 +1,8 @@
-import categoryData from "../data/data.json";
-import { Link } from "react-router-dom";
+// import categoryData from "../data/data.json";
+// import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom'
+import { useState, useEffect, useContext } from "react";
+import Context from '../contexts/Context'
 
 import footerLogo from "../img/logo.png";
 import iconFacebook from "../img/icons/icon-facebook.svg";
@@ -8,9 +10,19 @@ import iconInstagram from "../img/icons/icon-instagram.svg";
 import chevronUp from "../img/icons/chevron-up.svg";
 
 const Footer = () => {
-  let { category } = useParams()
-  console.log(category)
-  
+  const { category } = useParams()
+  // console.log(category)
+
+  const { darkMode, setDarkMode } = useContext(Context)
+
+  useEffect(() => {
+    if (category === undefined) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, [category]);
+
   const returnToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

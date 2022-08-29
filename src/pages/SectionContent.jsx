@@ -10,7 +10,7 @@ const SectionContent = () => {
       {/* <span>{photographyData.images[0].url}</span> */}
       <main>
         <ul className="section__photos">
-          {photographyData.images.map((image, key) => {
+          {photographyData.images.map((image) => {
             if (image.category === category) {
               return (
                 <li className="section__photos__images" key={`${image.url}`} >

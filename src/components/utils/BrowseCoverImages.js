@@ -10,7 +10,7 @@ const BrowseCoverImages = () => {
       setCoverImage(coverImage - 1);
     } else {
       setCoverImage(photographyData.images.length - 1);
-      console.log("beginning of list. image index at 0");
+      // console.log("beginning of list. image index at 0");
     }
   };
 
@@ -19,11 +19,18 @@ const BrowseCoverImages = () => {
       setCoverImage(coverImage + 1);
     } else {
       setCoverImage(0);
-      console.log("end of list. image index at " + coverImage);
+      // console.log("end of list. image index at " + coverImage);
     }
   };
 
-  return { coverImage, prevImage, nextImage };
+  function autoScroll() {
+    setInterval(() => {
+      nextImage();
+      // console.log("image index: " + coverImage);
+    }, 5000);
+  }
+
+  return { coverImage, prevImage, nextImage, autoScroll };
 };
 
 export default BrowseCoverImages
