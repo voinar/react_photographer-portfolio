@@ -90,10 +90,10 @@ select {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 70px 120px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(4, 2, 14, 0.9)));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(4, 2, 14, 0.9) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(4, 2, 14, 0.8)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 30%, rgba(4, 2, 14, 0.8) 100%);
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   color: #dedede;
   z-index: 2;
 }

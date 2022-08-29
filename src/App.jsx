@@ -1,6 +1,6 @@
 import "./styles/style.css";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Context from "./contexts/Context";
 
@@ -15,7 +15,7 @@ import About from "./pages/About";
 // {document.cookie="myCookie=init; expires=" + new Date(2022, 7, 28, 11, 52, 30)}
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <Context.Provider value={{ darkMode, setDarkMode }}>
