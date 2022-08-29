@@ -13,7 +13,7 @@ const Footer = () => {
   const { category } = useParams()
   // console.log(category)
 
-  const { darkMode, setDarkMode } = useContext(Context)
+  const { setDarkMode } = useContext(Context)
 
   useEffect(() => {
     if (category === undefined) {
@@ -21,7 +21,7 @@ const Footer = () => {
     } else {
       setDarkMode(false);
     }
-  }, [category, darkMode, setDarkMode]);
+  }, [category, setDarkMode]);
 
   const returnToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
