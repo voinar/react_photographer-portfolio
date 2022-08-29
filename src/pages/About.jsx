@@ -8,7 +8,7 @@ const About = () => {
     <>
       <div className="section__about">
       <div className="section__about__main">
-      <img src={bioPic} />
+      <img src={bioPic} alt="moje zdjęcie" />
       <div>
       <h1>O mnie</h1>
       <br/>
