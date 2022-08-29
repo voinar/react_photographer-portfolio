@@ -1,5 +1,6 @@
 import categoryData from "../data/data.json";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom'
 
 import footerLogo from "../img/logo.png";
 import iconFacebook from "../img/icons/icon-facebook.svg";
@@ -7,6 +8,9 @@ import iconInstagram from "../img/icons/icon-instagram.svg";
 import chevronUp from "../img/icons/chevron-up.svg";
 
 const Footer = () => {
+  let { category } = useParams()
+  console.log(category)
+  
   const returnToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -30,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="footer__column">
           <div>sport</div>
-          <div>chwile</div>
+          <div>emocje</div>
           <div>pejzaż</div>
           <div>dron</div>
         </div>

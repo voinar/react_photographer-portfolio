@@ -2,8 +2,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./styles/style.css";
 
 import Navbar from "./components/Navbar";
+import SectionWelcome from "./components/SectionWelcome";
 import SectionContent from "./components/SectionContent";
-import Footer from "./components/Footer";
 
 // {localStorage.setItem('user', 'name')}
 // {sessionStorage.setItem('status', 'unread')}
@@ -15,10 +15,11 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<SectionContent />} />
+        <Route path="/" element={<SectionWelcome />} />
+        <Route path="/witaj" element={<SectionWelcome />} />
         <Route path="/:category" element={<SectionContent />} />
       </Routes>
-      <Footer />
+
     </div>
   );
 }

@@ -1,4 +1,19 @@
-{ "categories": ["sport", "chwile", "pejzaż", "dron", "o mnie", "kontakt", "sklep"],
+{
+  "categories": [
+    "sport",
+    "emocje",
+    "galerie",
+    "o mnie",
+    "kontakt",
+    "sklep"
+  ],
+
+  "dropdownCategories": [
+    "z lotu ptaka",
+    "wydarzenia",
+    "portret",
+    "inne"
+],
   "images": [
     {
       "title": "BiegSokoła_cz1_001",
@@ -15,7 +30,7 @@
       "description": "",
       "thumbnail": "../BiegSokoła_cz1_006.jpg",
       "url": "../assets/BiegSokoła_cz1_006.jpg",
-      "category": "dron",
+      "category": "z lotu ptaka",
       "location": "location",
       "event": "event",
       "price": 10
@@ -35,7 +50,7 @@
       "description": "",
       "thumbnail": "",
       "url": "../assets/DSC_1417copy.jpg",
-      "category": "chwile",
+      "category": "emocje",
       "location": "location",
       "event": "event",
       "price": 10
@@ -102,5 +117,3 @@
     }
   ]
 }
-
-

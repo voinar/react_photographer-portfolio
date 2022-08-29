@@ -1,5 +1,5 @@
 /* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -89,14 +89,13 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 70px 120px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.7)));
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 2%, rgba(0, 0, 0, 0.7) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(4, 2, 14, 0.9)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(4, 2, 14, 0.9) 100%);
   width: 100%;
+  height: 50vh;
   color: #dedede;
+  z-index: 2;
 }
 
 .navbar a {
@@ -124,7 +123,7 @@ select {
           justify-content: center;
   width: 100%;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 0px;
 }
 
@@ -134,6 +133,135 @@ select {
 
 .navbar__section-link {
   margin: 0 40px 0 0;
+  width: 110px;
+}
+
+.navbar__section__dropdown {
+  padding: 0;
+  margin: 0 40px 0 0;
+  width: 110px;
+  -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  cursor: pointer;
+}
+
+.navbar__section__dropdown-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 18px;
+  margin-top: 8px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar__section__dropdown:hover .navbar__section__dropdown-link {
+  opacity: 1;
+}
+
+.section__welcome {
+  -webkit-animation: 3s ease-out 0s 1 fadeIn;
+          animation: 3s ease-out 0s 1 fadeIn;
+  z-index: 1;
+}
+
+.cover__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 70vh;
+  right: 5vw;
+}
+
+.cover__icons img {
+  margin-left: 8px;
+}
+
+.cover__icons__row-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cover__image {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cover__icons__social img {
+  height: 50px;
+}
+
+.icon__chevron-right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  height: 50px;
+}
+
+.icon__chevron-left {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  height: 50px;
+}
+
+.cover__icons__nav--left, .cover__icons__nav--right {
+  opacity: .7;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section__photos {
+  padding: 0;
+  margin: 0;
+  background-color: #dedede;
+}
+
+.section__photos__images img {
+  padding: 0px !important;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section__photos > .section__photos__images:not(:first-child) {
+  padding: 200px 150px;
 }
 
 .footer {
@@ -202,27 +330,9 @@ select {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Prompt", sans-serif;
   color: #181818;
-  background-color: #dedede;
+  background-color: black;
   min-width: 600px;
-}
-
-.section__photos {
-  padding: 0;
-  margin: 0;
-}
-
-.section__photos__images img {
-  padding: 200px;
-  padding: 0px !important;
-  height: 100vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.section__photos > .section__photos__images:not(:first-child) {
-  padding: 300px 200px;
 }
 /*# sourceMappingURL=style.css.map */

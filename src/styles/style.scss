@@ -8,8 +8,10 @@
 
 
 // components
-@import './components/_navbar';
-@import './components/_footer';
+@import '../components/styles/_navbar';
+@import '../components/styles/_SectionWelcome';
+@import '../components/styles/_SectionContent';
+@import '../components/styles/_footer';
 
 
 html * {
@@ -19,26 +21,11 @@ html * {
 body {
     font-family: $--font-main;
     color: $--c-black;
-    background-color: $--c-white;
+    background-color: black;
     min-width: 600px;
 }
 
-.section__photos {
-    padding: 0;
-    margin: 0;
-}
 
-.section__photos__images img {
-    padding: 200px;
-    padding: 0px !important;
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    // opacity: .6;
-}
 
-.section__photos > .section__photos__images:not(:first-child) {
-    padding: 300px 200px;
-}
 
 
