@@ -17,7 +17,7 @@ const SectionContent = () => {
                   <img src={`${image.url}`} alt={`${image.description}`} />
                 </li>
               );
-            }
+            } else return null
           })}
         </ul>
       </main>

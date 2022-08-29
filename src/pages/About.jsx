@@ -35,8 +35,8 @@ const About = () => {
       </div>
         <div className="section__about__contact">
             <h2 >Kontakt</h2>
-            <div className="section__about__contact__row"><img src={iconEmail}/><h3>kacper@kpkpkp.com</h3></div>
-            <div className="section__about__contact__row"><img src={iconPhone}/><h3>517 715 705</h3></div>
+            <div className="section__about__contact__row"><img src={iconEmail} alt="napisz email" /><h3>kacper@kpkpkp.com</h3></div>
+            <div className="section__about__contact__row"><img src={iconPhone} alt="zadzwoń" /><h3>517 715 705</h3></div>
         </div>
       </div>
       <Footer />
