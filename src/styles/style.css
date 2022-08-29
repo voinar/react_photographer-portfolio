@@ -38,6 +38,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  margin: 0;
 }
 
 /* A elements that don't have a class get default styles */
@@ -95,6 +96,18 @@ select {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.7)));
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 2%, rgba(0, 0, 0, 0.7) 100%);
   width: 100%;
+  color: #dedede;
+}
+
+.navbar a {
+  color: #dedede;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #c8c8c8;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar__content {
@@ -123,25 +136,93 @@ select {
   margin: 0 40px 0 0;
 }
 
+.footer {
+  height: 400px;
+  padding: 60px 200px;
+  background-color: #282828;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #dedede;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  width: 220px;
+}
+
+.footer__column {
+  text-align: center;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin: 26px 0;
+  height: 40px;
+  width: 220px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__social img {
+  width: 30px;
+}
+
+.footer__return-to-top {
+  cursor: pointer;
+}
+
+.footer__copyright {
+  margin: 120px auto 0;
+  bottom: 0px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
 body {
   font-family: "Raleway", sans-serif;
-  color: #dedede;
+  color: #181818;
   background-color: #dedede;
   min-width: 600px;
 }
 
-.cover-photo {
-  height: 80vh;
-  width: 100vw;
+.section__photos {
+  padding: 0;
+  margin: 0;
+}
+
+.section__photos__images img {
+  padding: 200px;
+  padding: 0px !important;
+  height: 100vh;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.section__container {
-  padding: 0 120px;
-}
-
-.section__photos__images img {
-  padding: 100px;
+.section__photos > .section__photos__images:not(:first-child) {
+  padding: 300px 200px;
 }
 /*# sourceMappingURL=style.css.map */

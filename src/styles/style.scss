@@ -9,6 +9,7 @@
 
 // components
 @import './components/_navbar';
+@import './components/_footer';
 
 
 html * {
@@ -17,20 +18,27 @@ html * {
 
 body {
     font-family: $--font-main;
-    color: $--c-white;
+    color: $--c-black;
     background-color: $--c-white;
     min-width: 600px;
 }
-.cover-photo {
-    height: 80vh;
-    width: 100vw;
-    object-fit: cover;
-}
 
-.section__container {
-    padding: 0 120px;
+.section__photos {
+    padding: 0;
+    margin: 0;
 }
 
 .section__photos__images img {
-    padding: 100px;
+    padding: 200px;
+    padding: 0px !important;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    // opacity: .6;
 }
+
+.section__photos > .section__photos__images:not(:first-child) {
+    padding: 300px 200px;
+}
+
+

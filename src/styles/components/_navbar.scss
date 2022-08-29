@@ -7,7 +7,17 @@
     padding: 70px 120px;
     background: linear-gradient(0deg, rgba(255,255,255,0) 2%, rgba(0,0,0,.7) 100%);
     width: 100%;
+    color: $--c-white;
 
+    a {
+        color: $--c-white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(200,200,200);
+        transition: 0.3s ease-in-out;
+    }
 }
 
 .navbar__content {
