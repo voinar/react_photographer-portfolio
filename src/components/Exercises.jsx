@@ -1,5 +1,0 @@
-const Exercises = () => {
-    return(<>
-        okk
-    </>)
-}

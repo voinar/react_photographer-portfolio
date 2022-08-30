@@ -8,9 +8,9 @@ import chevronUp from "../img/icons/chevron-up.svg";
 import BrowseCoverImages from "../components/utils/BrowseCoverImages";
 
 const SectionWelcome = () => {
-  const { coverImage, prevImage, nextImage, autoScroll } = BrowseCoverImages();
+  const { coverImage, prevImage, nextImage } = BrowseCoverImages();
 
-  autoScroll();
+  // autoScroll();
 
   return (
     <main>
@@ -31,10 +31,10 @@ const SectionWelcome = () => {
       <div className="cover__icons">
         <div className="cover__icons__row-container">
           <div className="cover__icons__social">
-            <img src={iconFacebook} alt="facebook"/>
+            <img src={iconFacebook} alt="facebook" />
           </div>
           <div className="cover__icons__social">
-            <img src={iconInstagram} alt="instagram"/>
+            <img src={iconInstagram} alt="instagram" />
           </div>
         </div>
         <div className="cover__icons__row-container">
