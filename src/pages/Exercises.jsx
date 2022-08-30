@@ -1,14 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // const handleChange = (e) => {};
 
-// const handleAdd = () => {};
+// wconst handleAdd = () => {};
+
+const nums = [1,2,3,4,5,6,7,8,9,10,11]
+
+const filtered = nums.filter(function(value){
+    return value !== 1
+})
+
+console.log(filtered)
 
 const Exercises = () => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
   const [userList, setUserList] = useState(["joe", "jim"]);
   const [removeUser, setRemoveUser] = useState("type user name");
+
+//   const [results, setResults] = useState('')
+
+//   const url = ''
+//   useEffect(()=> {
+//     const fetchContent = async () => {
+//         const res = await fetch(url)
+//         const fetchRes = res.json();
+//         setResults(fetchRes.results)
+//         console.log(results)
+//     }
+//     fetchContent()
+//   },[])
 
   return (
     <div
@@ -32,7 +53,7 @@ const Exercises = () => {
         <button
           onClick={(e) => {
             e.preventDefault();
-            setUserList((userList) => [...userList, userName]);
+            // setUserList((userList) => [...userList, userName]);
           }}
         >
           Add
@@ -78,7 +99,10 @@ const Exercises = () => {
           e.preventDefault();
           // setUserList(removeUser => console.log(removeUser))
           // console.log(typeof(removeUser))
+            // setUserList((prevUserList) => prevUserList.filter(function(user){return user !== removeUser}))
 
+
+            setUserList((prevList) => prevList.filter(function(user){return user !== removeUser}))
         }}
       >
         Remove
