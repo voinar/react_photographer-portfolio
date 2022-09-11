@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import Context from "../contexts/Context";
 
-import iconSun from "../img/icons/icon-sun.svg";
-import iconMoon from "../img/icons/icon-moon.svg";
+// import iconSun from "../img/icons/icon-sun.svg";
+// import iconMoon from "../img/icons/icon-moon.svg";
 
 const Navbar = () => {
-  const { darkMode, setDarkMode } = useContext(Context);
+  // const { darkMode, setDarkMode } = useContext(Context);
 
   // console.log(darkMode)
 
