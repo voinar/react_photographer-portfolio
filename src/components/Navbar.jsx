@@ -48,7 +48,7 @@ const Navbar = () => {
         }
         )
         }
-        {darkMode ? (
+        {/* {darkMode ? (
           <li>
             <img src={iconMoon} className="navbar__darkmode-toggle" onClick={()=>{setDarkMode(!darkMode)}} alt="toggle dark mode" />
           </li>
@@ -56,7 +56,7 @@ const Navbar = () => {
           <li>
             <img src={iconSun} className="navbar__darkmode-toggle" onClick={()=>{setDarkMode(!darkMode)}}alt="toggle dark mode" />
           </li>
-        )}
+        )} */}
       </ul>
     </nav>
   );

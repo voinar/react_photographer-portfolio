@@ -5,13 +5,12 @@
 
 
 // pages
-
-
-// components
-@import '../components/styles/_navbar';
 @import '../pages/styles/_SectionWelcome';
 @import '../pages/styles/_SectionContent';
 @import '../pages/styles/_About';
+
+// components
+@import '../components/styles/_navbar';
 @import '../components/styles/_footer';
 
 
