@@ -8,7 +8,7 @@ import Context from "../contexts/Context";
 // import iconMoon from "../img/icons/icon-moon.svg";
 
 const Navbar = () => {
-  // const { darkMode, setDarkMode } = useContext(Context);
+  const { darkMode } = useContext(Context);
 
   // console.log(darkMode)
 
